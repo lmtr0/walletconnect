@@ -10,13 +10,14 @@ const config = {
 	kit: {
         vite: {
             optimizeDeps: {
-                exclude: ['@walletconnect/client']
-            },
-            resolve: {
-
+                // exclude: ['@walletconnect/client']
             },
             define: {
-                global: {}
+                global: {},
+                process: {
+                    version: '1',
+                    env: ''
+                }
             }
         },
 		adapter: adapter(),
